@@ -1,0 +1,38 @@
+<!doctype html>
+<html data-ng-app="ES6app" data-ng-strict-di>
+	<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular ES6</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+	<body data-ng-controller="MainController as main">
+		<div class="container-fluid">
+		  <div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Wyszukiwarka</h3>
+						</div>
+						<div class="panel-body">
+							<form role="form">
+								<div class="form-group">
+									<label for="search">Szukaj:</label>
+									<input type="text" data-ng-model="main.searchItem" class="form-control" id="search">
+								</div>
+								<button type="submit" class="btn btn-default" data-ng-click="main.search()">Znajdź</button>
+								<div class="form-group">
+									<label for="result">Wynik:</label>
+									<input type="text" data-ng-model="main.items" class="form-control" id="result" readonly>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+		  </div>
+	</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
